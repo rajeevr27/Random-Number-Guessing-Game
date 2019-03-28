@@ -1,0 +1,10 @@
+body {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 1em;
+}
+
+.container {
+border: 5px solid green;
+padding: 16px;
+text-align: center;
+}
