@@ -4,4 +4,6 @@ This is my implementation of a Random Number Guessing Game written in JavaScript
 
 ## Screenshots
 
-<img src="screenshots/view2.png" width="300">
+<img src="screenshots/View2.png" width="800">
+
+<img src="screenshots/View3.png" width="800">
