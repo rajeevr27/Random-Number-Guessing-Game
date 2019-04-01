@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-border: 5px solid green;
-padding: 16px;
-text-align: center;
+  border: 5px solid green;
+  padding: 16px;
+  text-align: center;
 }
