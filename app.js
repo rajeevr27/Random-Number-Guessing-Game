@@ -34,7 +34,7 @@ guessButton.addEventListener("click", (event)=> {
     document.querySelector("input").style.backgroundColor = "#ff7f7f";//red backgroundcolor
     document.querySelector("input").disabled = true;
     event.preventDefault();
-  } else if (input.value % 1 != 0|| isNaN(input.value) || input.value < 1 || input.value > 100){
+  } else if (input.value % 1 != 0 || isNaN(input.value) || input.value < 1 || input.value > 100){
     document.querySelector("h2").style.color = "red";
     headlineTwo.textContent = `Please enter a whole number between 1-100. Not ${input.value}`;
     document.querySelector("input").style.backgroundColor = "#ff7f7f";//red backgroundcolor
