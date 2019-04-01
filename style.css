@@ -8,3 +8,14 @@ body {
   padding: 16px;
   text-align: center;
 }
+
+#myTextField {
+  height: 32px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.guessButton, .restartButton {
+  height: 32px;
+  font-size: 1.5em;
+}
