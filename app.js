@@ -47,7 +47,7 @@ guessButton.addEventListener("click", (event)=> {
     headlineThree.textContent = `Previous Guess was ${input.value}`;
     headlineFour.textContent = `Guess History ${previousGuess}`;
     headlineFive.textContent = `Number of guesses ${guessCount}`;
-    document.querySelector("input").style.backgroundColor = "white";
+    document.querySelector("input").style.backgroundColor = "lightgrey";
     input.value = "";
   } else if (input.value < randomNumber) {
     document.querySelector("h2").style.color = "black";
@@ -57,7 +57,7 @@ guessButton.addEventListener("click", (event)=> {
     headlineThree.textContent = `Previous Guess was ${input.value}`;
     headlineFour.textContent = `Guess History ${previousGuess}`;
     headlineFive.textContent = `Number of guesses ${guessCount}`;
-    document.querySelector("input").style.backgroundColor = "white";
+    document.querySelector("input").style.backgroundColor = "lightgrey";
     input.value = "";
   }
 });
