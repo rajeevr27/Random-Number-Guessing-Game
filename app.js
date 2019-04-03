@@ -51,7 +51,7 @@ guessButton.addEventListener("click", (event)=> {
     input.value = "";
   } else if (input.value < randomNumber) {
     document.querySelector("h2").style.color = "black";
-    headlineTwo.textContent = `Guess > higher`;
+    headlineTwo.textContent = `Guess > Higher`;
     previousGuess.push(input.value);
     guessCount = previousGuess.length;
     headlineThree.textContent = `Previous Guess was ${input.value}`;
