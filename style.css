@@ -13,7 +13,7 @@ body {
   height: 32px;
   font-size: 1.5em;
   text-align: center;
-  background-color: lightgrey;
+  background-color: #E8E8E8;
 }
 
 .guessButton, .restartButton {
