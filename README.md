@@ -5,5 +5,3 @@ This is my implementation of a Random Number Guessing Game written in JavaScript
 ## Screenshots
 
 <img src="screenshots/View2.png" width="1000">
-
-<img src="screenshots/View3.png" width="1000">
