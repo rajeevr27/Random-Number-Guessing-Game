@@ -19,21 +19,26 @@ function restartGame() {
    location.reload();
 }
 
-guessButton.addEventListener("click", (event)=> {
+guessButton.addEventListener("click", ()=> {
   if (input.value == randomNumber) {
     document.querySelector("h2").style.color = "green";
     headlineTwo.textContent =
       `You Guessed Right! The Random Number is ${randomNumber}. Press the Restart Game Button to start over.`;
+    previousGuess.push(input.value);
+    guessCount = previousGuess.length;
+    headlineFour.textContent = `Guess History ${previousGuess}`;
+    headlineFive.textContent = `Number of guesses ${guessCount}`;
     document.querySelector("input").disabled = true;
+    document.querySelector("button.guessButton").disabled = true;
     document.querySelector("input").style.backgroundColor = "#98fb98";//green backgroundcolor
-    event.preventDefault();
   } else if (guessCount >= 10) {
     document.querySelector("h2").style.color = "red";
     headlineTwo.textContent =
       `You have exceeded your number of guesses. Press the Restart Game Button to start over.`;
     document.querySelector("input").style.backgroundColor = "#ff7f7f";//red backgroundcolor
     document.querySelector("input").disabled = true;
-    event.preventDefault();
+    document.querySelector("button.guessButton").disabled = true;
+    document.querySelector("input").disabled = true;
   } else if (input.value % 1 != 0 || isNaN(input.value) || input.value < 1 || input.value > 100){
     document.querySelector("h2").style.color = "red";
     headlineTwo.textContent = `Please enter a whole number between 1-100.`;
