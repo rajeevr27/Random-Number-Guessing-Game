@@ -31,7 +31,7 @@ guessButton.addEventListener("click", ()=> {
     document.querySelector("input").disabled = true;
     document.querySelector("button.guessButton").disabled = true;
     document.querySelector("input").style.backgroundColor = "#98fb98";//green backgroundcolor
-  } else if (guessCount >= 10) {
+  } else if (guessCount >= 9) {
     document.querySelector("h2").style.color = "red";
     headlineTwo.textContent =
       `You have exceeded your number of guesses. Press the Restart Game Button to start over.`;
