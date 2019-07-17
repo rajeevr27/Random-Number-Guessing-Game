@@ -13,11 +13,11 @@ document.getElementById("myTextField").focus();
 
 const focusMethod = function getFocus() {
   document.getElementById("myTextField").focus();
-}
+  }
 
 function restartGame() {
    location.reload();
-}
+  }
 
 guessButton.addEventListener("click", ()=> {
   if (input.value == randomNumber) {
