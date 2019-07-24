@@ -15,7 +15,7 @@ const focusMethod = function getFocus() {
   document.getElementById("myTextField").focus();
   }
 
-function restartGame() {
+const restartGame = function beginAgain() {
    location.reload();
   }
 
