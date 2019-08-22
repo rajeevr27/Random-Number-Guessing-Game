@@ -30,7 +30,7 @@ guessButton.addEventListener("click", ()=> {
       headlineFive.textContent = `Number of guesses ${guessCount}`;
       document.querySelector("input").disabled = true;
       document.querySelector("button.guessButton").disabled = true;
-      document.querySelector("input").style.backgroundColor = "#98fb98";//green background color
+      document.querySelector("input").style.backgroundColor = "#98fb98";
   } else if (guessCount >= 9 && input.value > 0 && input.value < 101 && !isNaN(input.value) && !(input.value % 1 != 0)) {
       document.querySelector("h2").style.color = "red";
       headlineTwo.textContent =
@@ -41,11 +41,11 @@ guessButton.addEventListener("click", ()=> {
       headlineFive.textContent = `Number of guesses ${guessCount}`;
       document.querySelector("input").disabled = true;
       document.querySelector("button.guessButton").disabled = true;
-      document.querySelector("input").style.backgroundColor = "#ff7f7f";//red background color
+      document.querySelector("input").style.backgroundColor = "#ff7f7f";
   } else if (input.value % 1 != 0 || isNaN(input.value) || input.value < 1 || input.value > 100){
       document.querySelector("h2").style.color = "red";
       headlineTwo.textContent = `Please enter a whole number between 1 and 100.`;
-      document.querySelector("input").style.backgroundColor = "#ff7f7f";//red background color
+      document.querySelector("input").style.backgroundColor = "#ff7f7f";
       input.value = "";
   } else if (input.value > randomNumber) {
       document.querySelector("h2").style.color = "black";
@@ -55,7 +55,7 @@ guessButton.addEventListener("click", ()=> {
       headlineThree.textContent = `Previous Guess was ${input.value}`;
       headlineFour.textContent = `Guess History ${previousGuess}`;
       headlineFive.textContent = `Number of guesses ${guessCount}`;
-      document.querySelector("input").style.backgroundColor = "#E8E8E8";//lightgray background color
+      document.querySelector("input").style.backgroundColor = "#E8E8E8";
       input.value = "";
   } else if (input.value < randomNumber) {
       document.querySelector("h2").style.color = "black";
@@ -65,7 +65,7 @@ guessButton.addEventListener("click", ()=> {
       headlineThree.textContent = `Previous Guess was ${input.value}`;
       headlineFour.textContent = `Guess History ${previousGuess}`;
       headlineFive.textContent = `Number of guesses ${guessCount}`;
-      document.querySelector("input").style.backgroundColor = "#E8E8E8";//lightgray background color
+      document.querySelector("input").style.backgroundColor = "#E8E8E8";
       input.value = "";
   }
 });
