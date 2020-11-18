@@ -11,11 +11,11 @@ let guessCount;
 
 document.getElementById("myTextField").focus();
 
-const focusMethod = function getFocus() {
+const focusMethod = function() {
   document.getElementById("myTextField").focus();
   }
 
-const restartGame = function beginAgain() {
+const restartGame = function() {
    location.reload();
   }
 
