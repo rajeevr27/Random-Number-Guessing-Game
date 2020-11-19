@@ -19,7 +19,7 @@ const restartGame = function() {
    location.reload();
   }
 
-guessButton.addEventListener("click", ()=> {
+guessButton.addEventListener("click", function() {
   if (input.value == randomNumber) {
       document.querySelector("h2").style.color = "green";
       headlineTwo.textContent =
