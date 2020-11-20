@@ -19,4 +19,5 @@ body {
 .guessButton, .restartButton {
   height: 32px;
   font-size: 1.5em;
+  cursor: pointer;
   }
