@@ -29,7 +29,9 @@ guessButton.addEventListener("click", function() {
       headlineFour.textContent = `Guess History ${previousGuess}`;
       headlineFive.textContent = `Number of guesses ${guessCount}`;
       document.querySelector("input").disabled = true;
+      document.querySelector("input").style.cursor = "not-allowed";
       document.querySelector("button.guessButton").disabled = true;
+      document.querySelector("button.guessButton").style.cursor = "not-allowed";
       document.querySelector("input").style.backgroundColor = "#98fb98";//light green
       input.value = Number(input.value);
   } else if (guessCount >= 9 && !((input.value) % 1 != 0) && !isNaN(input.value) && input.value > 0 && input.value < 101) {
@@ -41,7 +43,9 @@ guessButton.addEventListener("click", function() {
       headlineFour.textContent = `Guess History ${previousGuess}`;
       headlineFive.textContent = `Number of guesses ${guessCount}`;
       document.querySelector("input").disabled = true;
+      document.querySelector("input").style.cursor = "not-allowed";
       document.querySelector("button.guessButton").disabled = true;
+      document.querySelector("button.guessButton").style.cursor = "not-allowed";
       document.querySelector("input").style.backgroundColor = "#ff7f7f";//light red
       input.value = Number(input.value);
   } else if (input.value % 1 != 0 || isNaN(input.value) || input.value < 1 || input.value > 100){
