@@ -54,7 +54,7 @@ guessButton.addEventListener("click", function() {
       headlineTwo.textContent = `Guess < Lower`;
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
-      headlineThree.textContent = `Previous Guess was ${Number(input.value)}`;
+      headlineThree.textContent = `Previous Guess ${Number(input.value)}`;
       headlineFour.textContent = `Guess History ${previousGuess}`;
       headlineFive.textContent = `Number of guesses ${guessCount}`;
       document.querySelector("input").style.backgroundColor = "#E8E8E8";//light gray
@@ -64,7 +64,7 @@ guessButton.addEventListener("click", function() {
       headlineTwo.textContent = `Guess > Higher`;
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
-      headlineThree.textContent = `Previous Guess was ${Number(input.value)}`;
+      headlineThree.textContent = `Previous Guess ${Number(input.value)}`;
       headlineFour.textContent = `Guess History ${previousGuess}`;
       headlineFive.textContent = `Number of guesses ${guessCount}`;
       document.querySelector("input").style.backgroundColor = "#E8E8E8";//light gray
