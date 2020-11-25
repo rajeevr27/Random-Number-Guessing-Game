@@ -26,8 +26,8 @@ guessButton.addEventListener("click", function() {
         `You Guessed Right! The Random Number is ${randomNumber}. Press the Restart Game Button to start over.`;
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
-      headlineFour.textContent = `Guess History ${previousGuess}`;
-      headlineFive.textContent = `Number of guesses ${guessCount}`;
+      headlineFour.textContent = `Guess History: ${previousGuess}`;
+      headlineFive.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").disabled = true;
       document.querySelector("input").style.cursor = "not-allowed";
       document.querySelector("button.guessButton").disabled = true;
@@ -40,8 +40,8 @@ guessButton.addEventListener("click", function() {
         `You have exceeded your number of guesses. Press the Restart Game Button to start over.`;
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
-      headlineFour.textContent = `Guess History ${previousGuess}`;
-      headlineFive.textContent = `Number of guesses ${guessCount}`;
+      headlineFour.textContent = `Guess History: ${previousGuess}`;
+      headlineFive.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").disabled = true;
       document.querySelector("input").style.cursor = "not-allowed";
       document.querySelector("button.guessButton").disabled = true;
@@ -58,9 +58,9 @@ guessButton.addEventListener("click", function() {
       headlineTwo.textContent = `Guess < Lower`;
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
-      headlineThree.textContent = `Previous Guess ${Number(input.value)}`;
-      headlineFour.textContent = `Guess History ${previousGuess}`;
-      headlineFive.textContent = `Number of guesses ${guessCount}`;
+      headlineThree.textContent = `Previous Guess: ${Number(input.value)}`;
+      headlineFour.textContent = `Guess History: ${previousGuess}`;
+      headlineFive.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").style.backgroundColor = "#E8E8E8";//light gray
       input.value = "";
   } else if (input.value < randomNumber) {
@@ -68,9 +68,9 @@ guessButton.addEventListener("click", function() {
       headlineTwo.textContent = `Guess > Higher`;
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
-      headlineThree.textContent = `Previous Guess ${Number(input.value)}`;
-      headlineFour.textContent = `Guess History ${previousGuess}`;
-      headlineFive.textContent = `Number of guesses ${guessCount}`;
+      headlineThree.textContent = `Previous Guess: ${Number(input.value)}`;
+      headlineFour.textContent = `Guess History: ${previousGuess}`;
+      headlineFive.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").style.backgroundColor = "#E8E8E8";//light gray
       input.value = "";
   }
