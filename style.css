@@ -21,3 +21,8 @@ body {
   font-size: 1.5em;
   cursor: pointer;
   }
+
+  .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
