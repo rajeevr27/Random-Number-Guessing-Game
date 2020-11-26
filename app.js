@@ -23,7 +23,7 @@ guessButton.addEventListener("click", function() {
   if (input.value == randomNumber) {
       document.querySelector("h2").style.color = "green";
       headlineTwo.textContent =
-        `You Guessed Right! The Random Number is ${randomNumber}. Press the Restart Game Button to start over.`;
+        `You Guessed Right! The Random Number is ${randomNumber}.`;
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
       headlineFour.textContent = `Guess History: ${previousGuess}`;
@@ -37,7 +37,7 @@ guessButton.addEventListener("click", function() {
   } else if (guessCount >= 9 && !((input.value) % 1 != 0) && !isNaN(input.value) && input.value > 0 && input.value < 101) {
       document.querySelector("h2").style.color = "red";
       headlineTwo.textContent =
-        `You have exceeded your number of guesses. Press the Restart Game Button to start over.`;
+        `You have exceeded your number of guesses.`;
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
       headlineFour.textContent = `Guess History: ${previousGuess}`;
