@@ -2,31 +2,31 @@ body {
   font-family: arial, helvetica, sans-serif;
   font-size: 1em;
   line-height: 1.5;
-  }
+}
 
 .container {
   border: 5px solid green;
   padding: 16px;
   text-align: center;
-  }
+}
 
 #myTextField {
   height: 32px;
   font-size: 1.5em;
   text-align: center;
   background-color: #E8E8E8;/* lightgray background */
-  }
+}
 
 .guessButton, .restartButton {
   height: 32px;
   font-size: 1.5em;
   cursor: pointer;
-  }
+}
 
-  .wrapper {
+.wrapper {
     max-width: 1024px;
     margin: 0 auto;
-  }
+}
 
 .inner-container {
     border: 2px solid green;
