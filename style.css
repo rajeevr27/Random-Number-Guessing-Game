@@ -10,19 +10,6 @@ body {
   text-align: center;
 }
 
-#myTextField {
-  height: 32px;
-  font-size: 1.5em;
-  text-align: center;
-  background-color: #E8E8E8;/* lightgray background */
-}
-
-.guessButton, .restartButton {
-  height: 32px;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
 .wrapper {
     max-width: 1024px;
     margin: 0 auto;
@@ -35,4 +22,17 @@ body {
     margin-bottom: 20px;
     text-align: left;
     padding: 10px;
+}
+
+#myTextField {
+  height: 32px;
+  font-size: 1.5em;
+  text-align: center;
+  background-color: #E8E8E8;/* lightgray background */
+}
+
+.guessButton, .restartButton {
+  height: 32px;
+  font-size: 1.5em;
+  cursor: pointer;
 }
