@@ -53,6 +53,11 @@ guessButton.addEventListener("click", function() {
       headlineTwo.textContent = `Please enter a whole number between 1 and 100.`;
       document.querySelector("input").style.backgroundColor = "#ff7f7f";//light red
       input.value = "";
+  } else if (previousGuess.indexOf(Number(input.value)) > -1){
+      document.querySelector("h2").style.color = "red";
+      headlineTwo.textContent = `The number ${Number(input.value)} has already been guessed.`;
+      document.querySelector("input").style.backgroundColor = "#ff7f7f";//light red
+      input.value = "";
   } else if (input.value > randomNumber) {
       document.querySelector("h2").style.color = "black";
       headlineTwo.textContent = `Guess < Lower`;
