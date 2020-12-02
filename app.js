@@ -4,6 +4,7 @@ const headlineTwo = document.querySelector("h2");
 const headlineThree = document.querySelector("h3");
 const headlineFour = document.querySelector("h4");
 const headlineFive = document.querySelector("h5");
+const indicator = document.querySelector("div.indicator");
 const guessButton = document.querySelector("button.guessButton");
 const restartButton = document.querySelector("button.restartButton")
 const previousGuess = [];
@@ -28,6 +29,7 @@ guessButton.addEventListener("click", function() {
       guessCount = previousGuess.length;
       headlineFour.textContent = `Guess History: ${previousGuess.join(' ')}`;
       headlineFive.textContent = `Number of Guesses: ${guessCount}`;
+      indicator.innerHTML = ``;
       document.querySelector("input").disabled = true;
       document.querySelector("input").style.cursor = "not-allowed";
       document.querySelector("button.guessButton").disabled = true;
@@ -42,6 +44,7 @@ guessButton.addEventListener("click", function() {
       guessCount = previousGuess.length;
       headlineFour.textContent = `Guess History: ${previousGuess.join(' ')}`;
       headlineFive.textContent = `Number of Guesses: ${guessCount}`;
+      indicator.innerHTML = ``;
       document.querySelector("input").disabled = true;
       document.querySelector("input").style.cursor = "not-allowed";
       document.querySelector("button.guessButton").disabled = true;
@@ -66,6 +69,7 @@ guessButton.addEventListener("click", function() {
       headlineThree.textContent = `Previous Guess: ${Number(input.value)}`;
       headlineFour.textContent = `Guess History: ${previousGuess.join(' ')}`;
       headlineFive.textContent = `Number of Guesses: ${guessCount}`;
+      indicator.innerHTML = `Guess<br><<br>Lower`;
       document.querySelector("input").style.backgroundColor = "#E8E8E8";//light gray
       input.value = "";
   } else if (input.value < randomNumber) {
@@ -76,6 +80,7 @@ guessButton.addEventListener("click", function() {
       headlineThree.textContent = `Previous Guess: ${Number(input.value)}`;
       headlineFour.textContent = `Guess History: ${previousGuess.join(' ')}`;
       headlineFive.textContent = `Number of Guesses: ${guessCount}`;
+      indicator.innerHTML = `Guess<br>><br>Higher`;
       document.querySelector("input").style.backgroundColor = "#E8E8E8";//light gray
       input.value = "";
   }

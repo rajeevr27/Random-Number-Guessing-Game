@@ -16,12 +16,24 @@ body {
 }
 
 .inner-container {
+    position: relative;
     border: 2px solid green;
     margin: 0 auto;
     max-width: 495px;
     margin-bottom: 20px;
     text-align: left;
     padding: 10px;
+}
+
+.indicator {
+  position: absolute;
+  border: 2px solid green;
+  width: 100px;
+  height: 100px;
+  top: 20%;
+  left: 75%;
+  text-align: center;
+  line-height: 2;
 }
 
 #myTextField {
