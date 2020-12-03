@@ -40,6 +40,7 @@ guessButton.addEventListener("click", function() {
       document.querySelector("h2").style.color = "red";
       headlineTwo.textContent =
         `You have exceeded your number of guesses.`;
+      alert.innerHTML = ``;
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
       headlineFour.textContent = `Guess History: ${previousGuess.join(' ')}`;
