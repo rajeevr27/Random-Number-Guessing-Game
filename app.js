@@ -4,7 +4,7 @@ const headlineTwo = document.querySelector("h2");
 const headlineThree = document.querySelector("h3");
 const headlineFour = document.querySelector("h4");
 const headlineFive = document.querySelector("h5");
-const indicator = document.querySelector("div.indicator");
+const alert = document.querySelector("div.alert");
 const guessButton = document.querySelector("button.guessButton");
 const restartButton = document.querySelector("button.restartButton")
 const previousGuess = [];
@@ -25,11 +25,11 @@ guessButton.addEventListener("click", function() {
       document.querySelector("h2").style.color = "green";
       headlineTwo.textContent =
         `You Guessed Right! The Random Number is ${randomNumber}.`;
+      alert.innerHTML = ``;
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
       headlineFour.textContent = `Guess History: ${previousGuess.join(' ')}`;
       headlineFive.textContent = `Number of Guesses: ${guessCount}`;
-      indicator.innerHTML = ``;
       document.querySelector("input").disabled = true;
       document.querySelector("input").style.cursor = "not-allowed";
       document.querySelector("button.guessButton").disabled = true;
@@ -44,7 +44,6 @@ guessButton.addEventListener("click", function() {
       guessCount = previousGuess.length;
       headlineFour.textContent = `Guess History: ${previousGuess.join(' ')}`;
       headlineFive.textContent = `Number of Guesses: ${guessCount}`;
-      indicator.innerHTML = ``;
       document.querySelector("input").disabled = true;
       document.querySelector("input").style.cursor = "not-allowed";
       document.querySelector("button.guessButton").disabled = true;
@@ -52,35 +51,35 @@ guessButton.addEventListener("click", function() {
       document.querySelector("input").style.backgroundColor = "#ff7f7f";//light red
       input.value = Number(input.value);
   } else if (input.value % 1 != 0 || isNaN(input.value) || input.value < 1 || input.value > 100){
-      document.querySelector("h2").style.color = "red";
-      headlineTwo.textContent = `Please enter a whole number between 1 and 100.`;
+      document.querySelector("div.alert").style.color = "red";
+      alert.innerHTML = `Please enter a whole number between 1 and 100.`;
       document.querySelector("input").style.backgroundColor = "#ff7f7f";//light red
       input.value = "";
   } else if (previousGuess.indexOf(Number(input.value)) > -1){
-      document.querySelector("h2").style.color = "red";
-      headlineTwo.textContent = `The number ${Number(input.value)} has already been guessed.`;
+      document.querySelector("div.alert").style.color = "red";
+      alert.innerHTML = `The number ${Number(input.value)} has already been guessed.`;
       document.querySelector("input").style.backgroundColor = "#ff7f7f";//light red
       input.value = "";
   } else if (input.value > randomNumber) {
       document.querySelector("h2").style.color = "black";
       headlineTwo.textContent = `Guess < Lower`;
+      alert.innerHTML = ``;
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
       headlineThree.textContent = `Previous Guess: ${Number(input.value)}`;
       headlineFour.textContent = `Guess History: ${previousGuess.join(' ')}`;
       headlineFive.textContent = `Number of Guesses: ${guessCount}`;
-      indicator.innerHTML = `Guess<br><<br>Lower`;
       document.querySelector("input").style.backgroundColor = "#E8E8E8";//light gray
       input.value = "";
   } else if (input.value < randomNumber) {
       document.querySelector("h2").style.color = "black";
       headlineTwo.textContent = `Guess > Higher`;
+      alert.innerHTML = ``;
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
       headlineThree.textContent = `Previous Guess: ${Number(input.value)}`;
       headlineFour.textContent = `Guess History: ${previousGuess.join(' ')}`;
       headlineFive.textContent = `Number of Guesses: ${guessCount}`;
-      indicator.innerHTML = `Guess<br>><br>Higher`;
       document.querySelector("input").style.backgroundColor = "#E8E8E8";//light gray
       input.value = "";
   }
