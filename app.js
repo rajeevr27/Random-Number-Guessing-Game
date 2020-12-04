@@ -5,8 +5,8 @@ const headlineThree = document.querySelector("h3");
 const headlineFour = document.querySelector("h4");
 const headlineFive = document.querySelector("h5");
 const alert = document.querySelector("div.alert");
-const guessButton = document.querySelector("button.guessButton");
-const restartButton = document.querySelector("button.restartButton")
+const guessButton = document.querySelector("button#guessButton");
+const restartButton = document.querySelector("button#restartButton")
 const previousGuess = [];
 let guessCount;
 
@@ -32,8 +32,8 @@ guessButton.addEventListener("click", function() {
       headlineFive.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").disabled = true;
       document.querySelector("input").style.cursor = "not-allowed";
-      document.querySelector("button.guessButton").disabled = true;
-      document.querySelector("button.guessButton").style.cursor = "not-allowed";
+      document.querySelector("button#guessButton").disabled = true;
+      document.querySelector("button#guessButton").style.cursor = "not-allowed";
       document.querySelector("input").style.backgroundColor = "#98fb98";//light green
       input.value = Number(input.value);
   } else if (guessCount >= 9 && !((input.value) % 1 != 0) && !isNaN(input.value) && input.value > 0 && input.value < 101) {
@@ -47,8 +47,8 @@ guessButton.addEventListener("click", function() {
       headlineFive.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").disabled = true;
       document.querySelector("input").style.cursor = "not-allowed";
-      document.querySelector("button.guessButton").disabled = true;
-      document.querySelector("button.guessButton").style.cursor = "not-allowed";
+      document.querySelector("button#guessButton").disabled = true;
+      document.querySelector("button#guessButton").style.cursor = "not-allowed";
       document.querySelector("input").style.backgroundColor = "#ff7f7f";//light red
       input.value = Number(input.value);
   } else if (input.value % 1 != 0 || isNaN(input.value) || input.value < 1 || input.value > 100){
