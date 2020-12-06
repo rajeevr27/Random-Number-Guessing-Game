@@ -6,6 +6,7 @@ This is my implementation of a Random Number Guessing Game written in JavaScript
 
 ## Screenshots
 
+<img src="screenshots/startscreen.png">
 <img src="screenshots/guessedright.png">
 <img src="screenshots/guesshigher.png">
 <img src="screenshots/guesslower.png">
