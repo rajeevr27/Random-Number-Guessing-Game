@@ -45,7 +45,7 @@ guessButton.addEventListener("click", function() {
   } else if (guessCount >= 9 && !((input.value) % 1 != 0) && !isNaN(input.value) && input.value > 0 && input.value < 101) {
       document.querySelector("h2").style.color = "red";
       headlineTwo.textContent =
-        `You have exceeded your number of guesses.`;
+        `You have reached the maximum number of guesses allowed.`;
       alertMessage.textContent = ``;
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
