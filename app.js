@@ -18,6 +18,7 @@ const focusMethod = function() {
 
 const restartGame = function() {
    location.reload();
+   document.getElementById("myTextField").value = "";
 }
 
 guessButton.addEventListener("click", function() {
