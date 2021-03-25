@@ -11,5 +11,5 @@ This is my implementation of a Random Number Guessing Game written in JavaScript
 <img src="screenshots/guesshigher.png">
 <img src="screenshots/guesslower.png">
 <img src="screenshots/wholenumber.png">
-<img src="screenshots/exceededguesses.png">
 <img src="screenshots/previouslyguessed.png">
+<img src="screenshots/maximumguessed.png">
