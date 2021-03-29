@@ -42,7 +42,7 @@ guessButton.addEventListener("click", function() {
       alertMessage.textContent = `The number ${Number(input.value)} has already been guessed.`;
       document.querySelector("input").style.backgroundColor = "#ff7f7f";//light red
       input.value = "";
-  } else if (guessCount >= 9 && !((input.value) % 1 != 0) && !isNaN(input.value) && input.value > 0 && input.value < 101) {
+  } else if (guessCount === 9 && !((input.value) % 1 != 0) && !isNaN(input.value) && input.value > 0 && input.value < 101) {
       document.querySelector("h2").style.color = "red";
       headlineTwo.textContent =
         `You have reached the maximum number of guesses allowed.`;
