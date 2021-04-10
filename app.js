@@ -13,12 +13,12 @@ let guessCount;
 document.getElementById("myTextField").focus();
 
 const focusMethod = function() {
-  document.getElementById("myTextField").focus();
+    document.getElementById("myTextField").focus();
 }
 
 const restartGame = function() {
-   location.reload();
-   document.getElementById("myTextField").value = "";
+    location.reload();
+    document.getElementById("myTextField").value = "";
 }
 
 guessButton.addEventListener("click", function() {
