@@ -10,6 +10,12 @@ const restartButton = document.querySelector("button#restartButton")
 const previousGuess = [];
 let guessCount;
 
+function checkArrayLength() {
+  if(previousGuess.length === 0) {
+    document.querySelector("h2").style.color = "orange";
+  }
+}
+
 document.getElementById("myTextField").focus();
 
 const focusMethod = function() {
@@ -60,6 +66,7 @@ guessButton.addEventListener("click", function() {
       document.querySelector("input").style.backgroundColor = "#ff7f7f";//light red
       input.value = Number(input.value);
   } else if (input.value % 1 != 0 || isNaN(input.value) || input.value < 1 || input.value > 100){
+      checkArrayLength();
       document.querySelector("div.alert-message").style.backgroundColor = "orange";
       alertMessage.textContent = `Please enter a whole number between 1 and 100.`;
       document.querySelector("input").style.backgroundColor = "#FCD299";//light orange
