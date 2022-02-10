@@ -46,3 +46,24 @@ body {
   font-size: 1.5em;
   cursor: pointer;
 }
+
+h4 {
+  display: inline-flex;
+  margin-top: 0px;
+  height: 0;
+}
+
+ul {
+  padding-left: 2px;
+}
+
+.list-style {
+  list-style: none;
+  padding-right: 2px;
+  height: 21px;
+  border: 2px solid transparent;
+}
+
+#border-style {
+  border: 2px solid green;
+}

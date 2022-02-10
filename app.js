@@ -10,6 +10,20 @@ const restartButton = document.querySelector("button#restartButton")
 const previousGuess = [];
 let guessCount;
 
+function myTracker() {
+  headlineFour.innerHTML = `<h4>Guess History:</h4>`;
+  headlineFour.innerHTML += `<ul>`;
+    for (let i=0; i<previousGuess.length; i+=1){//start of for loop
+      const guess = previousGuess[i];
+      if(guess == randomNumber) {
+        headlineFour.innerHTML += `<li class='list-style' id='border-style'>${previousGuess[i]}</li>`;
+      }else {
+        headlineFour.innerHTML += `<li class='list-style'>${previousGuess[i]}</li>`;
+      }
+    }//end of for Loop
+  headlineFour.innerHTML += `</ul>`;
+}
+
 function checkArrayLength() {
   if(previousGuess.length === 0) {
     document.querySelector("h2").style.color = "orange";
@@ -36,7 +50,7 @@ guessButton.addEventListener("click", function() {
       alertMessage.textContent = ``;
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
-      headlineFour.textContent = `Guess History: ${previousGuess.join(' ')}`;
+      myTracker();
       headlineFive.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").disabled = true;
       document.querySelector("input").style.cursor = "not-allowed";
@@ -57,7 +71,7 @@ guessButton.addEventListener("click", function() {
       alertMessage.textContent = ``;
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
-      headlineFour.textContent = `Guess History: ${previousGuess.join(' ')}`;
+      myTracker();
       headlineFive.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").disabled = true;
       document.querySelector("input").style.cursor = "not-allowed";
@@ -79,7 +93,7 @@ guessButton.addEventListener("click", function() {
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
       headlineThree.textContent = `Previous Guess: ${Number(input.value)}`;
-      headlineFour.textContent = `Guess History: ${previousGuess.join(' ')}`;
+      myTracker();
       headlineFive.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").style.backgroundColor = "#E8E8E8";//light gray
       input.value = "";
@@ -91,7 +105,7 @@ guessButton.addEventListener("click", function() {
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
       headlineThree.textContent = `Previous Guess: ${Number(input.value)}`;
-      headlineFour.textContent = `Guess History: ${previousGuess.join(' ')}`;
+      myTracker();
       headlineFive.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").style.backgroundColor = "#E8E8E8";//light gray
       input.value = "";
