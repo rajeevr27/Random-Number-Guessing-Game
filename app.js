@@ -1,6 +1,6 @@
 const randomNumber = Math.floor(Math.random() * 100) + 1;//Generates random number between 1 and 100
 const inputText = document.querySelector("input");
-const headlineTwo = document.querySelector("h2");
+const indicatorMessage = document.querySelector("h2");
 const headlineThree = document.querySelector("h3");
 const headlineFour = document.querySelector("h4");
 const headlineFive = document.querySelector("h5");
@@ -44,7 +44,7 @@ const restartGame = function() {
 guessButton.addEventListener("click", function() {
   if (inputText.value == randomNumber) {
       document.querySelector("h2").style.color = "green";
-      headlineTwo.textContent =
+      indicatorMessage.textContent =
         `You Guessed Right! The Random Number is ${randomNumber}.`;
       document.querySelector("div.alert-message").style.backgroundColor = "";
       alertMessage.textContent = ``;
@@ -65,7 +65,7 @@ guessButton.addEventListener("click", function() {
       inputText.value = "";
   } else if (guessCount === 9 && !((inputText.value) % 1 != 0) && !isNaN(inputText.value) && inputText.value > 0 && inputText.value < 101) {
       document.querySelector("h2").style.color = "red";
-      headlineTwo.textContent =
+      indicatorMessage.textContent =
         `You have reached the maximum number of guesses allowed.`;
       document.querySelector("div.alert-message").style.backgroundColor = "";
       alertMessage.textContent = ``;
@@ -87,7 +87,7 @@ guessButton.addEventListener("click", function() {
       inputText.value = "";
   } else if (inputText.value > randomNumber) {
       document.querySelector("h2").style.color = "black";
-      headlineTwo.textContent = `Guess < Lower`;
+      indicatorMessage.textContent = `Guess < Lower`;
       document.querySelector("div.alert-message").style.backgroundColor = "";
       alertMessage.textContent = ``;
       previousGuess.push(Number(inputText.value));
@@ -99,7 +99,7 @@ guessButton.addEventListener("click", function() {
       inputText.value = "";
   } else if (inputText.value < randomNumber) {
       document.querySelector("h2").style.color = "black";
-      headlineTwo.textContent = `Guess > Higher`;
+      indicatorMessage.textContent = `Guess > Higher`;
       document.querySelector("div.alert-message").style.backgroundColor = "";
       alertMessage.textContent = ``;
       previousGuess.push(Number(inputText.value));
