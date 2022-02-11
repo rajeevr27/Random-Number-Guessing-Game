@@ -2,7 +2,7 @@ const randomNumber = Math.floor(Math.random() * 100) + 1;//Generates random numb
 const inputText = document.querySelector("input");
 const indicatorMessage = document.querySelector("h2");
 const precedingGuess = document.querySelector("h3");
-const headlineFour = document.querySelector("h4");
+const guessHistory = document.querySelector("h4");
 const numberOfGuesses = document.querySelector("h5");
 const alertMessage = document.querySelector("div.alert-message");
 const guessButton = document.querySelector("button#guessButton");
@@ -11,17 +11,17 @@ const previousGuess = [];
 let guessCount;
 
 function guessListHistory() {
-  headlineFour.innerHTML = `<h4>Guess History:</h4>`;
-  headlineFour.innerHTML += `<ul>`;
-    for (let i=0; i<previousGuess.length; i+=1){//start of for loop
+  guessHistory.innerHTML = `<h4>Guess History:</h4>`;
+  guessHistory.innerHTML += `<ul>`;
+    for (let i=0; i<previousGuess.length; i+=1){//Start of for loop
       const guess = previousGuess[i];
       if(guess == randomNumber) {
-        headlineFour.innerHTML += `<li class='list-style' id='border-style'>${previousGuess[i]}</li>`;
+        guessHistory.innerHTML += `<li class='list-style' id='border-style'>${previousGuess[i]}</li>`;
       }else {
-        headlineFour.innerHTML += `<li class='list-style'>${previousGuess[i]}</li>`;
+        guessHistory.innerHTML += `<li class='list-style'>${previousGuess[i]}</li>`;
       }
-    }//end of for Loop
-  headlineFour.innerHTML += `</ul>`;
+    }//End of for loop
+  guessHistory.innerHTML += `</ul>`;
 }
 
 function checkArrayLength() {
