@@ -10,7 +10,7 @@ const restartButton = document.querySelector("button#restartButton")
 const previousGuess = [];
 let guessCount;
 
-function myTracker() {
+function guessListHistory() {
   headlineFour.innerHTML = `<h4>Guess History:</h4>`;
   headlineFour.innerHTML += `<ul>`;
     for (let i=0; i<previousGuess.length; i+=1){//start of for loop
@@ -50,7 +50,7 @@ guessButton.addEventListener("click", function() {
       alertMessage.textContent = ``;
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
-      myTracker();
+      guessListHistory();
       headlineFive.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").disabled = true;
       document.querySelector("input").style.cursor = "not-allowed";
@@ -71,7 +71,7 @@ guessButton.addEventListener("click", function() {
       alertMessage.textContent = ``;
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
-      myTracker();
+      guessListHistory();
       headlineFive.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").disabled = true;
       document.querySelector("input").style.cursor = "not-allowed";
@@ -93,7 +93,7 @@ guessButton.addEventListener("click", function() {
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
       headlineThree.textContent = `Previous Guess: ${Number(input.value)}`;
-      myTracker();
+      guessListHistory();
       headlineFive.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").style.backgroundColor = "#E8E8E8";//light gray
       input.value = "";
@@ -105,7 +105,7 @@ guessButton.addEventListener("click", function() {
       previousGuess.push(Number(input.value));
       guessCount = previousGuess.length;
       headlineThree.textContent = `Previous Guess: ${Number(input.value)}`;
-      myTracker();
+      guessListHistory();
       headlineFive.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").style.backgroundColor = "#E8E8E8";//light gray
       input.value = "";
