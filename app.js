@@ -1,7 +1,7 @@
 const randomNumber = Math.floor(Math.random() * 100) + 1;//Generates random number between 1 and 100
 const inputText = document.querySelector("input");
 const indicatorMessage = document.querySelector("h2");
-const precedingGuess = document.querySelector("h3");
+const previousGuess = document.querySelector("h3");
 const guessHistory = document.querySelector("h4");
 const numberOfGuesses = document.querySelector("h5");
 const alertMessage = document.querySelector("div.alert-message");
@@ -92,7 +92,7 @@ guessButton.addEventListener("click", function() {
       alertMessage.textContent = ``;
       previousGuesses.push(Number(inputText.value));
       guessCount = previousGuesses.length;
-      precedingGuess.textContent = `Previous Guess: ${Number(inputText.value)}`;
+      previousGuess.textContent = `Previous Guess: ${Number(inputText.value)}`;
       guessListHistory();
       numberOfGuesses.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").style.backgroundColor = "#E8E8E8";//light gray
@@ -104,7 +104,7 @@ guessButton.addEventListener("click", function() {
       alertMessage.textContent = ``;
       previousGuesses.push(Number(inputText.value));
       guessCount = previousGuesses.length;
-      precedingGuess.textContent = `Previous Guess: ${Number(inputText.value)}`;
+      previousGuess.textContent = `Previous Guess: ${Number(inputText.value)}`;
       guessListHistory();
       numberOfGuesses.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").style.backgroundColor = "#E8E8E8";//light gray
