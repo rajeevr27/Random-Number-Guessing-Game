@@ -7,25 +7,25 @@ const numberOfGuesses = document.querySelector("h5");
 const alertMessage = document.querySelector("div.alert-message");
 const guessButton = document.querySelector("button#guessButton");
 const restartButton = document.querySelector("button#restartButton")
-const previousGuess = [];
+const previousGuesses = [];
 let guessCount;
 
 function guessListHistory() {
   guessHistory.innerHTML = `<h4>Guess History:</h4>`;
   guessHistory.innerHTML += `<ul>`;
-    for (let i=0; i<previousGuess.length; i+=1){//Start of for loop
-      const guess = previousGuess[i];
+    for (let i=0; i<previousGuesses.length; i+=1){//Start of for loop
+      const guess = previousGuesses[i];
       if(guess == randomNumber) {
-        guessHistory.innerHTML += `<li class='list-style' id='border-style'>${previousGuess[i]}</li>`;
+        guessHistory.innerHTML += `<li class='list-style' id='border-style'>${previousGuesses[i]}</li>`;
       }else {
-        guessHistory.innerHTML += `<li class='list-style'>${previousGuess[i]}</li>`;
+        guessHistory.innerHTML += `<li class='list-style'>${previousGuesses[i]}</li>`;
       }
     }//End of for loop
   guessHistory.innerHTML += `</ul>`;
 }
 
 function checkArrayLength() {
-  if(previousGuess.length === 0) {
+  if(previousGuesses.length === 0) {
     document.querySelector("h2").style.color = "orange";
   }
 }
@@ -48,8 +48,8 @@ guessButton.addEventListener("click", function() {
         `You Guessed Right! The Random Number is ${randomNumber}.`;
       document.querySelector("div.alert-message").style.backgroundColor = "";
       alertMessage.textContent = ``;
-      previousGuess.push(Number(inputText.value));
-      guessCount = previousGuess.length;
+      previousGuesses.push(Number(inputText.value));
+      guessCount = previousGuesses.length;
       guessListHistory();
       numberOfGuesses.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").disabled = true;
@@ -58,7 +58,7 @@ guessButton.addEventListener("click", function() {
       document.querySelector("button#guessButton").style.cursor = "not-allowed";
       document.querySelector("input").style.backgroundColor = "#98fb98";//light green
       inputText.value = Number(inputText.value);
-  } else if (previousGuess.indexOf(Number(inputText.value)) > -1){
+  } else if (previousGuesses.indexOf(Number(inputText.value)) > -1){
       document.querySelector("div.alert-message").style.backgroundColor = "orange";
       alertMessage.textContent = `The number ${Number(inputText.value)} has already been guessed.`;
       document.querySelector("input").style.backgroundColor = "#FCD299";//light orange
@@ -69,8 +69,8 @@ guessButton.addEventListener("click", function() {
         `You have reached the maximum number of guesses allowed.`;
       document.querySelector("div.alert-message").style.backgroundColor = "";
       alertMessage.textContent = ``;
-      previousGuess.push(Number(inputText.value));
-      guessCount = previousGuess.length;
+      previousGuesses.push(Number(inputText.value));
+      guessCount = previousGuesses.length;
       guessListHistory();
       numberOfGuesses.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").disabled = true;
@@ -90,8 +90,8 @@ guessButton.addEventListener("click", function() {
       indicatorMessage.textContent = `Guess < Lower`;
       document.querySelector("div.alert-message").style.backgroundColor = "";
       alertMessage.textContent = ``;
-      previousGuess.push(Number(inputText.value));
-      guessCount = previousGuess.length;
+      previousGuesses.push(Number(inputText.value));
+      guessCount = previousGuesses.length;
       precedingGuess.textContent = `Previous Guess: ${Number(inputText.value)}`;
       guessListHistory();
       numberOfGuesses.textContent = `Number of Guesses: ${guessCount}`;
@@ -102,8 +102,8 @@ guessButton.addEventListener("click", function() {
       indicatorMessage.textContent = `Guess > Higher`;
       document.querySelector("div.alert-message").style.backgroundColor = "";
       alertMessage.textContent = ``;
-      previousGuess.push(Number(inputText.value));
-      guessCount = previousGuess.length;
+      previousGuesses.push(Number(inputText.value));
+      guessCount = previousGuesses.length;
       precedingGuess.textContent = `Previous Guess: ${Number(inputText.value)}`;
       guessListHistory();
       numberOfGuesses.textContent = `Number of Guesses: ${guessCount}`;
