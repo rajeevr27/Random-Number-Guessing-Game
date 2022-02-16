@@ -6,7 +6,6 @@ const guessHistory = document.querySelector("h4");
 const numberOfGuesses = document.querySelector("h5");
 const inputText = document.querySelector("input");
 const guessButton = document.querySelector("button#guessButton");
-const restartButton = document.querySelector("button#restartButton")
 const previousGuesses = [];
 let guessCount;
 
