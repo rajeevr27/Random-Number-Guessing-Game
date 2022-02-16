@@ -1,10 +1,10 @@
 const randomNumber = Math.floor(Math.random() * 100) + 1;//Generates random number between 1 and 100
-const inputText = document.querySelector("input");
 const indicatorMessage = document.querySelector("h2");
+const alertMessage = document.querySelector("div.alert-message");
 const previousGuess = document.querySelector("h3");
 const guessHistory = document.querySelector("h4");
 const numberOfGuesses = document.querySelector("h5");
-const alertMessage = document.querySelector("div.alert-message");
+const inputText = document.querySelector("input");
 const guessButton = document.querySelector("button#guessButton");
 const restartButton = document.querySelector("button#restartButton")
 const previousGuesses = [];
