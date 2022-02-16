@@ -5,7 +5,7 @@ const previousGuess = document.querySelector("h3");
 const guessHistory = document.querySelector("h4");
 const numberOfGuesses = document.querySelector("h5");
 const inputText = document.querySelector("input");
-const guessButton = document.querySelector("button#guessButton");
+const guessButton = document.querySelector("button#guess-button");
 const previousGuesses = [];
 let guessCount;
 
@@ -53,8 +53,8 @@ guessButton.addEventListener("click", function() {
       numberOfGuesses.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").disabled = true;
       document.querySelector("input").style.cursor = "not-allowed";
-      document.querySelector("button#guessButton").disabled = true;
-      document.querySelector("button#guessButton").style.cursor = "not-allowed";
+      document.querySelector("button#guess-button").disabled = true;
+      document.querySelector("button#guess-button").style.cursor = "not-allowed";
       document.querySelector("input").style.backgroundColor = "#98fb98";//light green
       inputText.value = Number(inputText.value);
   } else if (previousGuesses.indexOf(Number(inputText.value)) > -1){
@@ -74,8 +74,8 @@ guessButton.addEventListener("click", function() {
       numberOfGuesses.textContent = `Number of Guesses: ${guessCount}`;
       document.querySelector("input").disabled = true;
       document.querySelector("input").style.cursor = "not-allowed";
-      document.querySelector("button#guessButton").disabled = true;
-      document.querySelector("button#guessButton").style.cursor = "not-allowed";
+      document.querySelector("button#guess-button").disabled = true;
+      document.querySelector("button#guess-button").style.cursor = "not-allowed";
       document.querySelector("input").style.backgroundColor = "#ff7f7f";//light red
       inputText.value = Number(inputText.value);
   } else if (inputText.value % 1 != 0 || isNaN(inputText.value) || inputText.value < 1 || inputText.value > 100){

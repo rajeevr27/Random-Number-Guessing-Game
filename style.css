@@ -41,7 +41,7 @@ body {
   background-color: #E8E8E8;/* lightgray background */
 }
 
-#guessButton, #restart-button {
+#guess-button, #restart-button {
   height: 32px;
   font-size: 1.5em;
   cursor: pointer;
