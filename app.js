@@ -30,15 +30,15 @@ function checkArrayLength() {
   }
 }
 
-document.getElementById("myTextField").focus();
+document.getElementById("text-field").focus();
 
 const focusMethod = function() {
-    document.getElementById("myTextField").focus();
+    document.getElementById("text-field").focus();
 }
 
 const restartGame = function() {
     location.reload();
-    document.getElementById("myTextField").value = "";
+    document.getElementById("text-field").value = "";
 }
 
 guessButton.addEventListener("click", function() {
