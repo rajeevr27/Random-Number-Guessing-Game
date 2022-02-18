@@ -46,7 +46,7 @@ guessButton.addEventListener("click", function() {
       indicatorMessage.textContent =
         `You Guessed Right! The Random Number is ${randomNumber}.`;
       document.querySelector("div.alert-message").style.backgroundColor = "";
-      alertMessage.textContent = ``;
+      alertMessage.textContent = "";
       previousGuesses.push(Number(inputText.value));
       guessCount = previousGuesses.length;
       guessListHistory();
@@ -67,7 +67,7 @@ guessButton.addEventListener("click", function() {
       indicatorMessage.textContent =
         `You have reached the maximum number of guesses allowed.`;
       document.querySelector("div.alert-message").style.backgroundColor = "";
-      alertMessage.textContent = ``;
+      alertMessage.textContent = "";
       previousGuesses.push(Number(inputText.value));
       guessCount = previousGuesses.length;
       guessListHistory();
@@ -88,7 +88,7 @@ guessButton.addEventListener("click", function() {
       document.querySelector("h2").style.color = "black";
       indicatorMessage.textContent = `Guess < Lower`;
       document.querySelector("div.alert-message").style.backgroundColor = "";
-      alertMessage.textContent = ``;
+      alertMessage.textContent = "";
       previousGuesses.push(Number(inputText.value));
       guessCount = previousGuesses.length;
       previousGuess.textContent = `Previous Guess: ${Number(inputText.value)}`;
@@ -100,7 +100,7 @@ guessButton.addEventListener("click", function() {
       document.querySelector("h2").style.color = "black";
       indicatorMessage.textContent = `Guess > Higher`;
       document.querySelector("div.alert-message").style.backgroundColor = "";
-      alertMessage.textContent = ``;
+      alertMessage.textContent = "";
       previousGuesses.push(Number(inputText.value));
       guessCount = previousGuesses.length;
       previousGuess.textContent = `Previous Guess: ${Number(inputText.value)}`;
