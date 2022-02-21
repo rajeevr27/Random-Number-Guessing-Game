@@ -42,6 +42,7 @@ const restartGame = function() {
 
 guessButton.addEventListener("click", function() {
   if (inputText.value == randomNumber) {
+      document.querySelector("h2").style.transition = "all .5s";
       document.querySelector("h2").style.color = "green";
       indicatorMessage.textContent =
         `You Guessed Right! The Random Number is ${randomNumber}.`;
@@ -55,6 +56,7 @@ guessButton.addEventListener("click", function() {
       document.querySelector("input").style.cursor = "not-allowed";
       document.querySelector("button#guess-button").disabled = true;
       document.querySelector("button#guess-button").style.cursor = "not-allowed";
+      document.querySelector("input").style.transition = "all .5s";
       document.querySelector("input").style.backgroundColor = "#98fb98";//light green
       inputText.value = Number(inputText.value);
   } else if (previousGuesses.indexOf(Number(inputText.value)) > -1){
@@ -63,6 +65,7 @@ guessButton.addEventListener("click", function() {
       document.querySelector("input").style.backgroundColor = "#FCD299";//light orange
       inputText.value = "";
   } else if (guessCount === 9 && !((inputText.value) % 1 != 0) && !isNaN(inputText.value) && inputText.value > 0 && inputText.value < 101) {
+      document.querySelector("h2").style.transition = "all .5s";
       document.querySelector("h2").style.color = "red";
       indicatorMessage.textContent =
         `You have reached the maximum number of guesses allowed.`;
@@ -76,6 +79,7 @@ guessButton.addEventListener("click", function() {
       document.querySelector("input").style.cursor = "not-allowed";
       document.querySelector("button#guess-button").disabled = true;
       document.querySelector("button#guess-button").style.cursor = "not-allowed";
+      document.querySelector("input").style.transition = "all .5s";
       document.querySelector("input").style.backgroundColor = "#ff7f7f";//light red
       inputText.value = Number(inputText.value);
   } else if (inputText.value % 1 != 0 || isNaN(inputText.value) || inputText.value < 1 || inputText.value > 100){
