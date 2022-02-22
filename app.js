@@ -16,6 +16,8 @@ function guessListHistory() {
       const guess = previousGuesses[i];
       if (guess == randomNumber) {
         guessHistory.innerHTML += `<li class='list-style' id='border-style'>${previousGuesses[i]}</li>`;
+      } else if (Math.abs(guess - randomNumber) < 3) {
+        guessHistory.innerHTML += `<li class='list-style' id='border-style-orange'>${previousGuesses[i]}</li>`;
       } else {
         guessHistory.innerHTML += `<li class='list-style'>${previousGuesses[i]}</li>`;
       }
