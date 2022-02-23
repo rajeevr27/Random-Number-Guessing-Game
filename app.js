@@ -16,8 +16,6 @@ function guessListHistory() {
       const guess = previousGuesses[i];
       if (guess == randomNumber) {
         guessHistory.innerHTML += `<li class='list-style' id='border-style'>${previousGuesses[i]}</li>`;
-      } else if (Math.abs(guess - randomNumber) < 3) {
-        guessHistory.innerHTML += `<li class='list-style' id='border-style-orange'>${previousGuesses[i]}</li>`;
       } else {
         guessHistory.innerHTML += `<li class='list-style'>${previousGuesses[i]}</li>`;
       }
@@ -34,12 +32,12 @@ function checkArrayLength() {
 document.getElementById("text-field").focus();
 
 const focusMethod = function() {
-    document.getElementById("text-field").focus();
+  document.getElementById("text-field").focus();
 }
 
 const restartGame = function() {
-    location.reload();
-    document.getElementById("text-field").value = "";
+  location.reload();
+  document.getElementById("text-field").value = "";
 }
 
 guessButton.addEventListener("click", function() {
