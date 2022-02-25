@@ -12,7 +12,7 @@ let guessCount;
 function guessListHistory() {
   guessHistory.innerHTML = `<h4>Guess History:</h4>`;
   guessHistory.innerHTML += `<ul>`;
-    for (let i = 0; i < previousGuesses.length; i += 1){//Start of for loop
+    for (let i = 0; i < previousGuesses.length; i += 1) {//Start of for loop
       const guess = previousGuesses[i];
       if (guess == randomNumber) {
         guessHistory.innerHTML += `<li class='list-style' id='border-style'>${previousGuesses[i]}</li>`;
@@ -59,7 +59,7 @@ guessButton.addEventListener("click", function() {
       document.querySelector("input").style.transition = "all .5s ease-in";
       document.querySelector("input").style.backgroundColor = "#98fb98";//light green
       inputText.value = Number(inputText.value);
-  } else if (previousGuesses.indexOf(Number(inputText.value)) > -1){
+  } else if (previousGuesses.indexOf(Number(inputText.value)) > -1) {
       document.querySelector("div.alert-message").style.backgroundColor = "orange";
       alertMessage.textContent = `The number ${Number(inputText.value)} has already been guessed.`;
       document.querySelector("input").style.backgroundColor = "#FCD299";//light orange
@@ -82,7 +82,7 @@ guessButton.addEventListener("click", function() {
       document.querySelector("input").style.transition = "all .5s ease-in";
       document.querySelector("input").style.backgroundColor = "#ff7f7f";//light red
       inputText.value = Number(inputText.value);
-  } else if (inputText.value % 1 != 0 || isNaN(inputText.value) || inputText.value < 1 || inputText.value > 100){
+  } else if (inputText.value % 1 != 0 || isNaN(inputText.value) || inputText.value < 1 || inputText.value > 100) {
       checkArrayLength();
       document.querySelector("div.alert-message").style.backgroundColor = "orange";
       alertMessage.textContent = `Please enter a whole number between 1 and 100.`;
