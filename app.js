@@ -60,8 +60,10 @@ guessButton.addEventListener("click", function() {
       document.querySelector("input").style.backgroundColor = "#98fb98";//light green
       inputText.value = Number(inputText.value);
   } else if (previousGuesses.indexOf(Number(inputText.value)) > -1) {
+      document.querySelector("div.alert-message").style.transition = "all .5s ease-in";
       document.querySelector("div.alert-message").style.backgroundColor = "orange";
       alertMessage.textContent = `The number ${Number(inputText.value)} has already been guessed.`;
+      document.querySelector("input").style.transition = "all .5s ease-in";
       document.querySelector("input").style.backgroundColor = "#FCD299";//light orange
       inputText.value = "";
   } else if (guessCount === 9 && !((inputText.value) % 1 != 0) && !isNaN(inputText.value) && inputText.value > 0 && inputText.value < 101) {
@@ -84,8 +86,10 @@ guessButton.addEventListener("click", function() {
       inputText.value = Number(inputText.value);
   } else if (inputText.value % 1 != 0 || isNaN(inputText.value) || inputText.value < 1 || inputText.value > 100) {
       checkArrayLength();
+      document.querySelector("div.alert-message").style.transition = "all .5s ease-in";
       document.querySelector("div.alert-message").style.backgroundColor = "orange";
       alertMessage.textContent = `Please enter a whole number between 1 and 100.`;
+      document.querySelector("input").style.transition = "all .5s ease-in";
       document.querySelector("input").style.backgroundColor = "#FCD299";//light orange
       inputText.value = "";
   } else if (inputText.value > randomNumber) {
