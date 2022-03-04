@@ -4,7 +4,7 @@ const alertMessage = document.querySelector("div.alert-message");
 const previousGuess = document.querySelector("h3");
 const guessHistory = document.querySelector("h4");
 const numberOfGuesses = document.querySelector("h5");
-const inputText = document.querySelector("input");
+const inputText = document.querySelector("input#text-field");
 const guessButton = document.querySelector("button#guess-button");
 const previousGuesses = [];
 let guessCount;
