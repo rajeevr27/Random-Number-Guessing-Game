@@ -1,4 +1,4 @@
-const randomNumber = Math.floor(Math.random() * 100) + 1;//Generates random number between 1 and 100
+const randomNumber = Math.floor(Math.random() * 100) + 1;//Generates random integer between 1 and 100
 const indicatorMessage = document.querySelector("h2");
 const alertMessage = document.querySelector("div.alert-message");
 const previousGuess = document.querySelector("h3");
