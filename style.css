@@ -61,6 +61,7 @@ ul {
   list-style: none;
   height: 21px;
   border: 2px solid transparent;
+  padding: 2px;
 }
 
 #border-style {
