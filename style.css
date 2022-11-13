@@ -25,7 +25,7 @@ body {
   font-weight: bold;
 }
 
-.inner-container {
+#inner-container {
   border: 2px solid green;
   margin: 0 auto;
   max-width: 495px;
