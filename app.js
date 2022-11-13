@@ -1,6 +1,6 @@
 const randomNumber = Math.floor(Math.random() * 100) + 1;//Generates random integer between 1 and 100
 const indicatorMessage = document.querySelector("h2");
-const alertMessage = document.querySelector("div#alert-message");
+const alertMessage = document.querySelector("div#alert-message-container");
 const previousGuess = document.querySelector("h3");
 const guessHistory = document.querySelector("h4");
 const numberOfGuesses = document.querySelector("h5");
@@ -45,7 +45,7 @@ guessButton.addEventListener("click", function() {
       document.querySelector("h2").style.color = "green";
       indicatorMessage.textContent =
         `You Guessed Right! The Random Number is ${randomNumber}.`;
-      document.querySelector("div#alert-message").style.backgroundColor = "";
+      document.querySelector("div#alert-message-container").style.backgroundColor = "";
       alertMessage.textContent = "";
       previousGuesses.push(Number(inputText.value));
       guessCount = previousGuesses.length;
@@ -58,7 +58,7 @@ guessButton.addEventListener("click", function() {
       document.querySelector("input").style.backgroundColor = "#98fb98";//light green
       inputText.value = Number(inputText.value);
   } else if (previousGuesses.indexOf(Number(inputText.value)) > -1) {
-      document.querySelector("div#alert-message").style.backgroundColor = "orange";
+      document.querySelector("div#alert-message-container").style.backgroundColor = "orange";
       alertMessage.textContent = `The number ${Number(inputText.value)} has already been guessed.`;
       document.querySelector("input").style.backgroundColor = "#FCD299";//light orange
       inputText.value = "";
@@ -66,7 +66,7 @@ guessButton.addEventListener("click", function() {
       document.querySelector("h2").style.color = "red";
       indicatorMessage.textContent =
         `You have reached the maximum number of guesses allowed.`;
-      document.querySelector("div#alert-message").style.backgroundColor = "";
+      document.querySelector("div#alert-message-container").style.backgroundColor = "";
       alertMessage.textContent = "";
       previousGuesses.push(Number(inputText.value));
       guessCount = previousGuesses.length;
@@ -80,14 +80,14 @@ guessButton.addEventListener("click", function() {
       inputText.value = Number(inputText.value);
   } else if (inputText.value % 1 != 0 || isNaN(inputText.value) || inputText.value < 1 || inputText.value > 100) {
       checkArrayLength();
-      document.querySelector("div#alert-message").style.backgroundColor = "orange";
+      document.querySelector("div#alert-message-container").style.backgroundColor = "orange";
       alertMessage.textContent = `Please enter a whole number between 1 and 100.`;
       document.querySelector("input").style.backgroundColor = "#FCD299";//light orange
       inputText.value = "";
   } else if (inputText.value > randomNumber) {
       document.querySelector("h2").style.color = "black";
       indicatorMessage.textContent = `Guess < Lower`;
-      document.querySelector("div#alert-message").style.backgroundColor = "";
+      document.querySelector("div#alert-message-container").style.backgroundColor = "";
       alertMessage.textContent = "";
       previousGuesses.push(Number(inputText.value));
       guessCount = previousGuesses.length;
@@ -99,7 +99,7 @@ guessButton.addEventListener("click", function() {
   } else if (inputText.value < randomNumber) {
       document.querySelector("h2").style.color = "black";
       indicatorMessage.textContent = `Guess > Higher`;
-      document.querySelector("div#alert-message").style.backgroundColor = "";
+      document.querySelector("div#alert-message-container").style.backgroundColor = "";
       alertMessage.textContent = "";
       previousGuesses.push(Number(inputText.value));
       guessCount = previousGuesses.length;
