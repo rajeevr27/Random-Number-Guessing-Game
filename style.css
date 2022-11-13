@@ -54,17 +54,17 @@ h4 {
 }
 
 ul {
-  padding-left: 2px;
   display: inline-block;
+  padding-left: 2px;
   margin: 0;
 }
 
 .list-style {
+  display: inline;
   list-style: none;
   height: 21px;
   border: 2px solid transparent;
   padding: 2px;
-  display: inline;
 }
 
 #border-style {
