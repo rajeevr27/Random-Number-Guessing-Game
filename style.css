@@ -48,13 +48,15 @@ body {
 }
 
 h4 {
-  display: inline-flex;
+  display: inline-block;
   margin-top: 0px;
   height: 0;
 }
 
 ul {
   padding-left: 2px;
+  display: inline-block;
+  margin: 0;
 }
 
 .list-style {
@@ -62,6 +64,7 @@ ul {
   height: 21px;
   border: 2px solid transparent;
   padding: 2px;
+  display: inline;
 }
 
 #border-style {
