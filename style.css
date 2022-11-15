@@ -48,22 +48,18 @@ body {
 }
 
 h4 {
-  display: inline-block;
-  margin-top: 0px;
-  height: 0;
+  display: inline;
 }
 
 ul {
-  display: inline-block;
+  display: inline;
   padding-left: 2px;
-  margin: 0;
 }
 
 .list-style {
   display: inline;
   list-style: none;
-  height: 21px;
-  border: 2px solid transparent;
+  margin-right: 2px;
   padding: 2px;
 }
 
