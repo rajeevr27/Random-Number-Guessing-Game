@@ -34,6 +34,13 @@ body {
   padding: 10px;
 }
 
+#button-container {
+  border: 2px solid green;
+  margin: 0 auto;
+  max-width: 520px;
+  padding: 10px;
+}
+
 #text-field {
   height: 32px;
   font-size: 1.5em;
