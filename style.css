@@ -20,7 +20,7 @@ body {
   margin: 0 auto;
   max-width: 520px;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   height: 25px;
   font-weight: bold;
 }
@@ -29,7 +29,7 @@ body {
   border: 2px solid green;
   margin: 0 auto;
   max-width: 520px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   text-align: left;
   padding: 10px;
 }
